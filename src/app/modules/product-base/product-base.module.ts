@@ -9,6 +9,9 @@ import { ProductInfoComponent } from './product-info/product-info.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { ProductPageComponent } from './pages/product-page/product-page.component';
 import { RouterModule } from '@angular/router';
+import { ReviewListComponent } from './review-list/review-list.component';
+import { ReviewDetailComponent } from './review-detail/review-detail.component';
+import { ReviewService } from './services/review.service';
 
 @NgModule({
   imports: [
@@ -17,7 +20,7 @@ import { RouterModule } from '@angular/router';
   exports: [
     ProductListComponent, ProductInfoComponent
   ],
-  declarations: [ProductBaseComponent, ProductListComponent, ProductDetailComponent, ProductInfoComponent, HomePageComponent, ProductPageComponent],
-  providers: [ProductService]
+  declarations: [ProductBaseComponent, ProductListComponent, ProductDetailComponent, ProductInfoComponent, HomePageComponent, ProductPageComponent, ReviewListComponent, ReviewDetailComponent],
+  providers: [ProductService, ReviewService]
 })
 export class ProductBaseModule { }
