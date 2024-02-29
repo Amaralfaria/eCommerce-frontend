@@ -5,15 +5,16 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductService } from './services/product.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { ProductInfoComponent } from './product-info/product-info.component';
 
 @NgModule({
   imports: [
     CommonModule, HttpClientModule
   ],
   exports: [
-    ProductBaseComponent
+    ProductListComponent, ProductInfoComponent
   ],
-  declarations: [ProductBaseComponent, ProductListComponent, ProductDetailComponent],
+  declarations: [ProductBaseComponent, ProductListComponent, ProductDetailComponent, ProductInfoComponent],
   providers: [ProductService]
 })
 export class ProductBaseModule { }
