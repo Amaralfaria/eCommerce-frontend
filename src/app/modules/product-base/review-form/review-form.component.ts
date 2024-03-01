@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { Review } from '../../../models/review';
+import { ActivatedRoute } from '@angular/router';
+import { ReviewService } from '../services/review.service';
 
 @Component({
   selector: 'app-review-form',
@@ -7,9 +11,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReviewFormComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private reviewService: ReviewService) { }
 
   ngOnInit() {
+  }
+
+  makeReview(form: NgForm){
+    let review: Review = {
+      comment: form.value.comment,
+      product: parseInt(this.route.snapshot.paramMap.get('idProduct')!),
+      rating: form.value.rating
+    }
+
+    this.reviewService.postReview(review).subscribe((data: any) => {
+      console.log(data);
+    });
+
   }
 
 }

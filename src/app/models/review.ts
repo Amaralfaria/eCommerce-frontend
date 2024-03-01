@@ -1,7 +1,7 @@
 export interface Review{
-    client: number,
+    client?: number,
     product: number,
     rating: number,
     comment: string,
-    date_time: Date
+    date_time?: Date
 }

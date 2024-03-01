@@ -17,7 +17,8 @@ getReviews(idProduct: number): Observable<Review[]>{
 }
 
 postReview(review: Review): any{
-    return this.http.post(`create/`,JSON.stringify(review));
+    let review_data = JSON.stringify(review);
+    return this.http.post(`create/`, review_data);
 }
 
 }
