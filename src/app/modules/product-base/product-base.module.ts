@@ -12,15 +12,17 @@ import { RouterModule } from '@angular/router';
 import { ReviewListComponent } from './review-list/review-list.component';
 import { ReviewDetailComponent } from './review-detail/review-detail.component';
 import { ReviewService } from './services/review.service';
+import { FormsModule } from '@angular/forms';
+import { ReviewFormComponent } from './review-form/review-form.component';
 
 @NgModule({
   imports: [
-    CommonModule, HttpClientModule, RouterModule
+    CommonModule, HttpClientModule, RouterModule, FormsModule
   ],
   exports: [
     ProductListComponent, ProductInfoComponent
   ],
-  declarations: [ProductBaseComponent, ProductListComponent, ProductDetailComponent, ProductInfoComponent, HomePageComponent, ProductPageComponent, ReviewListComponent, ReviewDetailComponent],
+  declarations: [ProductBaseComponent, ProductListComponent, ProductDetailComponent, ProductInfoComponent, HomePageComponent, ProductPageComponent, ReviewListComponent, ReviewDetailComponent, ReviewFormComponent],
   providers: [ProductService, ReviewService]
 })
 export class ProductBaseModule { }
