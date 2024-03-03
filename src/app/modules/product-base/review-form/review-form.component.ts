@@ -24,7 +24,7 @@ export class ReviewFormComponent implements OnInit {
     }
 
     this.reviewService.postReview(review).subscribe((data: any) => {
-      console.log(data);
+      console.log(data)
     });
 
   }

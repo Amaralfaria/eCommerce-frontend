@@ -20,4 +20,8 @@ getSingleProduct(idProduct: number): Observable<Product>{
     return this.http.get<Product>(PRODUCT_API + `one/${idProduct}`)
 }
 
+getSellerProducts(): Observable<Product[]>{
+    return this.http.get<Product[]>(PRODUCT_API + 'list/my_products')
+}
+
 }

@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { HomePageComponent } from './modules/product-base/pages/home-page/home-page.component';
 import { ProductPageComponent } from './modules/product-base/pages/product-page/product-page.component';
 import { SignInPageComponent } from './modules/auth/pages/sign-in-page/sign-in-page.component';
+import { SellerProductsPageComponent } from './modules/product-base/pages/seller-products-page/seller-products-page.component';
 
 export const routes: Routes = [
     {
@@ -17,6 +18,11 @@ export const routes: Routes = [
     {
         path: 'sign-in',
         component: SignInPageComponent,
+        pathMatch: 'full'
+    },
+    {
+        path: 'my-products',
+        component: SellerProductsPageComponent,
         pathMatch: 'full'
     }
 ];

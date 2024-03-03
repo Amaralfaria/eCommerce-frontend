@@ -14,6 +14,7 @@ import { ReviewDetailComponent } from './review-detail/review-detail.component';
 import { ReviewService } from './services/review.service';
 import { FormsModule } from '@angular/forms';
 import { ReviewFormComponent } from './review-form/review-form.component';
+import { SellerProductsPageComponent } from './pages/seller-products-page/seller-products-page.component';
 
 @NgModule({
   imports: [
@@ -22,7 +23,7 @@ import { ReviewFormComponent } from './review-form/review-form.component';
   exports: [
     ProductListComponent, ProductInfoComponent
   ],
-  declarations: [ProductBaseComponent, ProductListComponent, ProductDetailComponent, ProductInfoComponent, HomePageComponent, ProductPageComponent, ReviewListComponent, ReviewDetailComponent, ReviewFormComponent],
+  declarations: [ProductBaseComponent, ProductListComponent, ProductDetailComponent, ProductInfoComponent, HomePageComponent, ProductPageComponent, ReviewListComponent, ReviewDetailComponent, ReviewFormComponent, SellerProductsPageComponent],
   providers: [ProductService, ReviewService]
 })
 export class ProductBaseModule { }

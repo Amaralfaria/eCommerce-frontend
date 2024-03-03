@@ -17,7 +17,6 @@ export class ReviewListComponent implements OnInit {
   constructor(private reviewService: ReviewService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    console.log('AAAAAAAAAAAA')
     this.reviewService.getReviews(this.idProduct).subscribe((data: Review[]) => {
       this.reviews = data;
     })

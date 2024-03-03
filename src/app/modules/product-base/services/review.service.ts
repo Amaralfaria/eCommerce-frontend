@@ -13,12 +13,12 @@ export class ReviewService {
 constructor(private http: HttpClient) { }
 
 getReviews(idProduct: number): Observable<Review[]>{
-    return this.http.get<Review[]>(`list/${REVIEW_API}${idProduct}`)
+    return this.http.get<Review[]>(`${REVIEW_API}list/${idProduct}`)
 }
 
-postReview(review: Review): any{
-    let review_data = JSON.stringify(review);
-    return this.http.post(`create/`, review_data);
+postReview(review: Review): Observable<Review>{
+    let review_data = JSON.stringify(review)
+    return this.http.post<Review>(`${REVIEW_API}create/`, review_data);
 }
 
 }
